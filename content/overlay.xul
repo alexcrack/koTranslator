@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay PUBLIC "-//MOZILLA//DTD XUL V1.0//EN" "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<overlay id="kotranslatorOverlay"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript"
+          src="chrome://kotranslator/content/translate.js" />
+
+  <commandset id="allcommands">
+    <commandset id="update-translator-menu"
+            commandupdater="true"
+            events="select"
+            oncommandupdate="goUpdateCommand('Tasks:Translate');"/>
+    <command id="Tasks:Translate" oncommand="kotranslator.detectAndTranslate();"/>
+  </commandset>
+  
+  <menupopup id="editorContextMenu">
+    <menuseparator
+        id="buffertab-context-sep-tabtools"
+        insertafter="editor-context-sep-extensions"
+      />
+    <menuitem
+        id="menu-kotranslator"
+        class="menuitem-iconic-wide"
+        label="Translate into English"
+        observes="Tasks:Translate"
+      />
+  </menupopup>
+    
+</overlay>
