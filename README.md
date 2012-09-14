@@ -1,3 +1,4 @@
+This is fork of the https://bitbucket.org/kreichgauer/kotranslator
 This extension translates text from a lot of languages into English using the Yandex.ru translate AJAX API.
 It helps you to create expressions names.
 Just select the text you want to translate in a Komodo buffer, right-click and choose Translate into English from the context menu.
